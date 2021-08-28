@@ -1,0 +1,30 @@
+class name{
+    setname(name){
+        this.name = name;
+    }
+        declare(){
+            console.log(this.name)
+        }
+}
+
+const NAME = new name();
+
+NAME.setname("akash");
+NAME.declare();
+
+//another wat//
+
+class name{
+   constructor(name){
+       this.name = name;
+   }
+        declare(){
+            console.log(this.name)
+        }
+}
+
+
+
+
+const NAME = new name("akash");
+NAME.declare();
