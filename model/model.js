@@ -6,7 +6,7 @@ let valid = if(city===""){
     axios.get(url).then((response)=>{
 
         
-        console.log(response)
+      
         res.render("index",{
            name : response.data.main.temp+" is temp in  celsius "+
            response.data.main.humidity+" is humidity  "+

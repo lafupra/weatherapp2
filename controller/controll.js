@@ -20,23 +20,7 @@ exports.cityweather = (req,res) => {
     const city = req.body.city;
     const url = 'http://api.openweathermap.org/data/2.5/weather?q='+city+'&appid=443a5ccfb03a71a8a44a319f673e19be&units=metric'
 
-    class name{
-        setname(name){
-            this.name = name;
-        }
-            declare(){
-                console.log(this.name)
-            }
-    }
-    
-    
-    
-    
-    const NAME = new name();
-    
-    NAME.setname(city);
-    NAME.declare();
-    
+   
 
 
     if(city===""){
@@ -47,7 +31,7 @@ exports.cityweather = (req,res) => {
         axios.get(url).then((response)=>{
     
             
-            console.log(response.data.weather)
+            
             res.render("index",{
                temp :  "temp: "+response.data.main.temp,
                 humidity : "humidity: "+response.data.main.humidity,
