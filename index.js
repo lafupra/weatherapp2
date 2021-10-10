@@ -13,3 +13,5 @@ app.set("views","views");
 
 app.use("/",router);
 
+app.listen(3000)
+
