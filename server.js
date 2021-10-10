@@ -13,22 +13,3 @@ app.set("views","views");
 
 app.use("/",router);
 
-class name{
-   constructor(name){
-       this.name = name;
-   }
-        declare(){
-            console.log(this.name)
-        }
-}
-
-
-
-
-const NAME = new name("akash");
-
-
-NAME.declare();
-
-
-app.listen(3000)
