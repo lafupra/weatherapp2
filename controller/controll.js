@@ -47,25 +47,25 @@ exports.cityweather = (req,res) => {
         axios.get(url).then((response)=>{
     
             
-            console.log(response)
+            console.log(response.data.weather)
             res.render("index",{
-               name : response.data.main.temp+" is temp in  celsius "+
-               response.data.main.humidity+" is humidity  "+
-               response.data.main.pressure+" is pressure "+
-               response.data.main.feels_like+" feels "+
-               response.data.visibility+" visibility "+
-               response.data.sys.country+" country "+
-               response.data.name+" is city "
-    
-    
-    
-    
-                      
+               temp :  "temp: "+response.data.main.temp,
+                humidity : "humidity: "+response.data.main.humidity,
+               pressure : "pressure: "+response.data.main.pressure,
+               feels : "temp feels: "+response.data.main.feels_like,
+               visibility :"visibility: "+ response.data.visibility,
+               country   : "country: "+response.data.sys.country,
+                 city   : "city: "+response.data.name,
+              longitude  :  "longitude:  "+response.data.coord.lon,
+               latitude : "lati: "+response.data.coord.lat,
+               catch :  "wind speed : "+response.data.wind.speed,
+               rain :  response.data.rain,
+               weather : response.data.weather  
            })
             
         }).catch((err)=>{
             res.render("index",{
-                name : err
+                erre : err
             })
         })
       }

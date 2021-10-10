@@ -22,8 +22,30 @@
          
        
        <div style="margin-top:1rem;color:red;margin-left:1.5rem">
-           {{name}}
-           {{error}}
+           
+           {{error}}<br>
+            {{temp}}<br>
+             {{humidity}}<br>
+              {{pressure}}<br>
+               {{feels}}<br>
+                {{visibiity}}
+                {{country}}<br>
+                  {{longitude}}<br>
+                  {{latitude}}<br>
+                  {{catch}}<br>
+                   {{#each rain}}
+  <li>{{this}}</li>
+  {{/each}}
+  <br>
+        
+                   {{#each weather}}
+  {{#each this}}
+  <li>{{this}}</li>
+  {{/each}}
+  {{/each}}
+                  
+                
+
        </div></div>
       
         <script src="" async defer></script>
